@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register as Voter – E-Voting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #4A90E2, #50E3C2);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 60px;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 650px;
+      width: 100%;
+      backdrop-filter: blur(6px);
+    }
+
+    h1 {
+      text-align: center;
+      color: #4A90E2;
+      margin-bottom: 30px;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    form input[type="text"],
+    form input[type="password"],
+    form input[type="file"] {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      background-color: #f9f9f9;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: linear-gradient(90deg, #4A90E2, #50E3C2);
+      border: none;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #50E3C2, #4A90E2);
+    }
+
+    p {
+      margin-top: 15px;
+      color: green;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Register as Voter</h1>
+    <form action="register_voter.php" method="POST" enctype="multipart/form-data">
+      <label>Voter Name:
+        <input type="text" name="voter_name" required>
+      </label>
+      <label>Voter ID:
+        <input type="text" name="voter_id" required>
+      </label>
+      <label>Password:
+        <input type="password" name="password" required>
+      </label>
+      <label>Upload Profile Photo (optional):
+        <input type="file" name="profile_photo" accept="image/*">
+      </label>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>

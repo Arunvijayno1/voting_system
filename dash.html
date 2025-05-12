@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - E-Voting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #4A90E2, #50E3C2);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #ffffffcc;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #4A90E2;
+    }
+
+    .container {
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .card p {
+      color: #666;
+    }
+
+    .btn {
+      margin-top: 15px;
+      padding: 12px 18px;
+      background-color: #4A90E2;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background-color: #357ABD;
+    }
+
+    @media screen and (max-width: 768px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .container {
+        padding: 20px;
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Admin Dashboard - E-Voting</h1>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>Set Voting Time</h2>
+      <p>Configure start and end time for voting.</p>
+      <button class="btn" onclick="location.href='set_time.html'">Go to Set Time</button>
+    </div>
+
+    <div class="card">
+      <h2>View Reports</h2>
+      <p>Analyze voting results using graphs and statistics.</p>
+      <button class="btn" onclick="location.href='view_reports.html'">View Reports</button>
+    </div>
+
+    <div class="card">
+      <h2>Candidate List</h2>
+      <p>View registered candidates and party flags.</p>
+      <button class="btn" onclick="location.href='candidate_list.html'">View Candidates</button>
+    </div>
+
+    <div class="card">
+      <h2>Voter List</h2>
+      <p>See all registered voters with their IDs.</p>
+      <button class="btn" onclick="location.href='voter_list.html'">View Voters</button>
+    </div>
+
+    <div class="card">
+      <h2>Logout</h2>
+      <p>Securely end your session.</p>
+      <button class="btn" onclick="location.href='logout.php'">Logout</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Set Voting Time</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Set Voting Time</h1>
+    <form action="set_time.php" method="POST">
+      <label>Start Time:</label>
+      <input type="datetime-local" name="start_time" required>
+      <label>End Time:</label>
+      <input type="datetime-local" name="end_time" required>
+      <button type="submit">Save</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel – E-Voting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #4A90E2, #50E3C2);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+  min-height: 100vh;
+}
+
+
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 650px;
+  width: 100%;
+  backdrop-filter: blur(6px);
+}
+
+
+h1 {
+  text-align: center;
+  color: #4A90E2;
+  margin-bottom: 30px;
+}
+
+.card {
+  margin-bottom: 40px;
+}
+
+.card h2 {
+  color: #333;
+  border-left: 4px solid #4A90E2;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="datetime-local"],
+form input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #f9f9f9;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: linear-gradient(90deg, #4A90E2, #50E3C2);
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #50E3C2, #4A90E2);
+}
+
+p {
+  margin-top: 15px;
+  color: green;
+  font-weight: 500;
+}
+
+</style>
+<body>
+  <div class="container">
+    <h1>E-Voting Admin Panel</h1>
+
+    <section class="card">
+      <h2>Set Voting Start & End Time</h2>
+      <form id="dateForm">
+        <label>Start Date & Time:
+          <input type="datetime-local" name="startDateTime" required>
+        </label>
+        <label>End Date & Time:
+          <input type="datetime-local" name="endDateTime" required>
+        </label>
+        <button type="submit">Save</button>
+        <p id="dateMsg"></p>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Upload Party Flag</h2>
+      <form id="flagForm" enctype="multipart/form-data" method="POST" action="upload.php">
+        <label>Party Name:
+          <input type="text" name="partyName" required>
+        </label>
+        <label>Flag Image:
+          <input type="file" name="flagImage" accept="image/*" required>
+        </label>
+        <button type="submit">Upload</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Admin Profile</h2>
+      <p><strong>Name:</strong> Admin</p>
+      <p><strong>Email:</strong> admin@evote.com</p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Candidate Login – E-Voting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #8E2DE2, #4A00E0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      width: 400px;
+    }
+    h2 {
+      text-align: center;
+      color: #4A00E0;
+      margin-bottom: 30px;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #4A00E0;
+      color: white;
+      border: none;
+      font-weight: 600;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background-color: #6a11cb;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 style="color:#00B894">Voter Login</h2>
+    <form action="voter_login.php" method="POST">
+      <label>User ID:
+        <input type="text" name="user_id" required>
+      </label>
+      <label>Password:
+        <input type="password" name="password" required>
+      </label>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</body>
+</html>
